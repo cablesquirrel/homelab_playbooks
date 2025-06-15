@@ -1,0 +1,14 @@
+---
+- name: Shutdown or enable port on Cisco switch
+  hosts: "{{ switch }}"
+  gather_facts: no
+  connection: network_cli
+
+  vars:
+    ansible_network_os: cisco.ios.ios
+
+  tasks:
+    - name: Ensure interface state
+      cisco.ios.ios_interface:
+        name: "{{ interface }}"
+        enabled: "{{ (action == 'no shut') | ternary(true, false) }}"
