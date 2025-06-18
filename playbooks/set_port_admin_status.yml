@@ -13,4 +13,3 @@
         config:
           - name: "{{ interface }}"
             enabled: "{{ (port_status == 'no shut') | ternary(true, false) }}"
-      delegate_to: localhost
