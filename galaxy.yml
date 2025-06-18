@@ -8,7 +8,7 @@ name: "homelab"
 version: 1.0.0
 readme: README.md
 authors:
-  - your name <example@domain.com>
+  - Eric Hansen <ericzone.admin@gmail.com>
 
 description: your collection description
 license_file: LICENSE
@@ -19,6 +19,7 @@ tags: ["linux", "tools"]
 # TO-DO: maintain this list to reflect the collection's dependencies
 dependencies:
   "ansible.utils": "*" # note: "*" selects the latest version available
+  "cisco.ios": "*"
 
 repository: http://example.com/repository
 documentation: http://docs.example.com

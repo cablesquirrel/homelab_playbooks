@@ -1,0 +1,12 @@
+{
+    "ansible.python.interpreterPath": "/Users/erhansen/.pyenv/versions/3.13.1/bin/python",
+    "cSpell.words": [
+        "bindep",
+        "boto",
+        "cablesquirrel",
+        "fnmatch",
+        "homelab",
+        "PYCMD",
+        "sshpass"
+    ]
+}
