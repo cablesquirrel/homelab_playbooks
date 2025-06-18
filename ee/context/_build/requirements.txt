@@ -1,0 +1,3 @@
+ansible-navigator
+boto3
+requests
