@@ -9,4 +9,4 @@
       cisco.ios.ios_interfaces:
         config:
           - name: "{{ interface }}"
-            enabled: "{{ (action == 'no shut') | ternary(true, false) }}"
+            enabled: "{{ (port_status == 'no shut') | ternary(true, false) }}"
