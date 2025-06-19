@@ -11,6 +11,12 @@
       delegate_to: localhost
       changed_when: false
 
+    - name: Make a test connection
+      ansible.builtin.command:
+        cmd: ssh Test@{{ switch | default('SWITCH1') }}
+      delegate_to: localhost
+      changed_when: false
+
     - name: Set interface state
       cisco.ios.ios_interfaces:
         config:
