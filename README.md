@@ -1,6 +1,6 @@
 # Homelab Playbooks
 
-Author: Eric Hansen <eric.hansen@cox.com>
+Author: Eric Hansen <ericzone.admin@gmail.com>
 
 ## EE Build
 
