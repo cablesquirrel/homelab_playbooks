@@ -9,7 +9,7 @@ is configured to run the playbook using this environment.
 
 ```bash
 cd ee
-ansible-builder build --tag ghcr.io/USERNAME/homelab_playbooks:latest --container-runtime docker
+ansible-builder build --tag ghcr.io/cablesquirrel/homelab_playbooks:latest --container-runtime docker
 
 export CR_PAT="YOUR_PAT_HERE"
 echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
