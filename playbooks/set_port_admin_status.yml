@@ -15,3 +15,5 @@
         config:
           - name: "{{ interface }}"
             enabled: "{{ (port_status == 'no shut') | ternary(true, false) }}"
+      become: true
+      become_method: ansible.netcommon.enable
