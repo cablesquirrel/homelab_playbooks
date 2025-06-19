@@ -20,8 +20,11 @@ dependencies:
   system:
     - openssh-clients
     - sshpass
+    - crypto-policies
+    - crypto-policies-scripts
 
   python: requirements.txt
+
   galaxy: collections/requirements.yml
 
 additional_build_files:
@@ -34,6 +37,9 @@ additional_build_steps:
   prepend_final:
     - RUN mkdir -p /etc/ssh/ssh_config.d
     - COPY _build/configs/ssh_config_override /etc/ssh/ssh_config.d/custom_kex_override.conf
+  append_final:
+    - RUN update-crypto-policies --set LEGACY
+    - RUN update-crypto-policies --show
 
 options:
   tags:

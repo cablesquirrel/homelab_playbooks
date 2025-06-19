@@ -1,2 +1,4 @@
 openssh-clients
 sshpass
+crypto-policies
+crypto-policies-scripts

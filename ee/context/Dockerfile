@@ -92,6 +92,8 @@ RUN chmod ug+rw /etc/passwd
 RUN mkdir -p /runner && chgrp 0 /runner && chmod -R ug+rwx /runner
 WORKDIR /runner
 RUN $PYCMD -m pip install --no-cache-dir 'dumb-init==1.2.5'
+RUN update-crypto-policies --set LEGACY
+RUN update-crypto-policies --show
 RUN rm -rf /output
 LABEL ansible-execution-environment=true
 USER 1000

@@ -1,3 +1,6 @@
+ansible-core
 ansible-navigator
 boto3
 requests
+jmespath
+netaddr
