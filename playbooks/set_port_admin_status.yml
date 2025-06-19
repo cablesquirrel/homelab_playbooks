@@ -9,6 +9,7 @@
       cisco.ios.ios_command:
         commands:
           - terminal length 0
+          - show running-config interface {{ interface }}
 
     - name: Set interface state
       cisco.ios.ios_interfaces:
