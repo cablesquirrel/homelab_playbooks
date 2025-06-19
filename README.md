@@ -14,5 +14,5 @@ ansible-builder build --tag ghcr.io/cablesquirrel/homelab_playbooks:latest --con
 export CR_PAT="YOUR_PAT_HERE"
 echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
 
-docker push ghcr.io/USERNAME/homelab_playbooks:latest
+docker push ghcr.io/cablesquirrel/homelab_playbooks:latest
 ```

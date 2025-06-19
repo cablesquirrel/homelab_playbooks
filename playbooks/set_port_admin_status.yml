@@ -5,6 +5,12 @@
   connection: network_cli
 
   tasks:
+    - name: Test SSH to host
+      ansible.builtin.command:
+        cmd: ssh -Q kex {{ switch | default('SWITCH1') }}
+      delegate_to: localhost
+      changed_when: false
+
     - name: Set interface state
       cisco.ios.ios_interfaces:
         config:

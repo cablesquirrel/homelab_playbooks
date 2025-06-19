@@ -80,6 +80,8 @@ ARG ANSIBLE_GALAXY_CLI_ROLE_OPTS
 ARG ANSIBLE_INSTALL_REFS
 ARG PKGMGR
 
+RUN mkdir -p /etc/ssh/ssh_config.d
+COPY _build/configs/ssh_config_override /etc/ssh/ssh_config.d/custom_kex_override.conf
 RUN /output/scripts/check_ansible $PYCMD
 
 COPY --from=galaxy /usr/share/ansible /usr/share/ansible
