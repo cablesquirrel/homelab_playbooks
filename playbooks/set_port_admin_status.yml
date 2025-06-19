@@ -16,4 +16,4 @@
         config:
           - name: "{{ interface }}"
             enabled: "{{ (port_status == 'no shut') | ternary(true, false) }}"
-      state: rendered
+        state: rendered
