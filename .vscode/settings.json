@@ -4,8 +4,10 @@
         "bindep",
         "boto",
         "cablesquirrel",
+        "diffie",
         "fnmatch",
         "homelab",
+        "hostvars",
         "PYCMD",
         "sshpass"
     ]

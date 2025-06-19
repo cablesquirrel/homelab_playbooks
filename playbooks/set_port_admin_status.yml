@@ -13,7 +13,7 @@
 
     - name: Make a test connection
       ansible.builtin.command:
-        cmd: "ssh -o StrictHostKeyChecking no Test@{{ hostvars[switch].ansible_host | default('SWITCH1') }}"
+        cmd: "ssh -o StrictHostKeyChecking=no Test@{{ hostvars[switch].ansible_host | default('SWITCH1') }}"
       delegate_to: localhost
       changed_when: false
 
